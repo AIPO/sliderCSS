@@ -28,3 +28,17 @@ body {
 .slide.current {
   opacity: 1;
 }
+/* Background images */
+.slide:first-child{
+  background: url('./images/image1.jpg');
+}
+.slide:nth-child(2){
+  background: url('./images/image2.jpg');
+}
+.slide:nth-child(2){
+  background: url('./images/image3.jpg');
+}
+.slide:nth-child(2){
+  background: url('./images/image4.jpg');
+}
+

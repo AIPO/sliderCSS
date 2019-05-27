@@ -20,10 +20,16 @@ const prevSlide = () => {
     current.classList.remove('current');
     //Check for prev slide
     if (current.previousElementSibling) {
-        current.previuosElementSibling.classList.add('current');
+        current.previousElementSibling.classList.add('current');
     } else {
         //add current to last
-        slides[slides.length -1].classList.add('current');
+        slides[slides.length-1].classList.add('current');
     }
     setTimeout(() => current.classList.remove('current'));
 }
+next.addEventListener('click', e => {
+    nextSlide();
+});
+prev.addEventListener('click', e => {
+    prevSlide();
+});

@@ -28,36 +28,36 @@ body {
 .slide.current {
   opacity: 1;
 }
-.slide .content{
+.slide .content {
   position: absolute;
-  bottom:70px;
+  bottom: 70px;
   /* left: 0px; */
-  left:-600px;
-  width:600px;
+  left: -600px;
+  width: 600px;
   opacity: 0;
   background-color: rgba(255, 255, 255, 0.8);
   color: #333;
   padding: 35px;
 }
-.slide .content h1{
-  margin-bottom:10px ;
+.slide .content h1 {
+  margin-bottom: 10px;
 }
-.slide.current .content{
-opacity: 1;
-transform: translateX(600px);
-transition: all 0.7s ease-in-out 0.3s;
+.slide.current .content {
+  opacity: 1;
+  transform: translateX(600px);
+  transition: all 0.7s ease-in-out 0.3s;
 }
 
-.buttons button#next{
+.buttons button#next {
   position: absolute;
   right: 15px;
 }
-.buttons button#prev{
+.buttons button#prev {
   position: absolute;
   left: 15px;
 }
-.buttons button{
-  top:50%;
+.buttons button {
+  top: 50%;
   border: 2px solid #fff;
   background-color: transparent;
   color: #fff;
@@ -66,23 +66,31 @@ transition: all 0.7s ease-in-out 0.3s;
   border-radius: 50%;
   outline: none;
 }
-.buttons button:hover{
+.buttons button:hover {
   background-color: #fff;
-  color:#333;
+  color: #333;
 }
-
+@media (max-width: 500px) {
+  .slide .content {
+    bottom: -300px;
+    left: 0;
+    width: 100%;
+  }
+  .slide.current .content{
+    transform: translateY(-300px);
+  }
+}
 
 /* Background images */
-.slide:first-child{
-  background: url('./images/image1.jpg');
+.slide:first-child {
+  background: url("./images/image1.jpg");
 }
-.slide:nth-child(2){
-  background: url('./images/image2.jpg');
+.slide:nth-child(2) {
+  background: url("./images/image2.jpg");
 }
-.slide:nth-child(3){
-  background: url('./images/image3.jpeg');
+.slide:nth-child(3) {
+  background: url("./images/image3.jpeg");
 }
-.slide:nth-child(4){
-  background: url('./images/image4.jpg');
+.slide:nth-child(4) {
+  background: url("./images/image4.jpg");
 }
-
